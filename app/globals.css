@@ -1,0 +1,180 @@
+@import "tailwindcss";
+
+@theme {
+  --color-vermelho: #BB240A;
+  --color-vermelho-warm: #C83214;
+  --color-azul: #2B5CB8;
+  --color-azul-deep: #1E3A8A;
+  --color-areia: #E5DBD1;
+  --color-areia-light: #F7F3EE;
+  --color-areia-tint: #ECE5DC;
+  --color-amarelo: #EDCC4D;
+  --color-cafe: #623F1B;
+  --color-cafe-dark: #38200B;
+
+  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono), ui-monospace, monospace;
+}
+
+:root {
+  --canvas-bg: #F7F3EE;
+  --text-primary: #38200B;
+  --border-primary: #623F1B;
+}
+
+body {
+  background-color: var(--canvas-bg);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+}
+
+/* Neo-Brutalist & Tactile Tokens */
+.brutal-card {
+  border: 2.5px solid #623F1B;
+  box-shadow: 4px 4px 0px #623F1B;
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.brutal-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 7px 7px 0px #623F1B;
+}
+
+.brutal-card-lg {
+  border: 2.5px solid #623F1B;
+  box-shadow: 6px 6px 0px #623F1B;
+}
+
+.brutal-card-dual {
+  border: 2.5px solid #623F1B;
+  box-shadow: 4px 4px 0px #623F1B, 8px 8px 0px #EDCC4D;
+  transition: all 0.15s ease;
+}
+
+.brutal-card-dual:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #623F1B, 11px 11px 0px #EDCC4D;
+}
+
+.brutal-pill {
+  border: 2.5px solid #623F1B;
+  box-shadow: 3px 3px 0px #623F1B;
+  transition: all 0.12s ease;
+}
+
+.brutal-pill:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0px #623F1B;
+}
+
+.brutal-pill:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #623F1B;
+}
+
+.brutal-badge {
+  border: 1.5px solid #623F1B;
+  box-shadow: 2px 2px 0px #623F1B;
+}
+
+/* Tactile Washi Tape */
+.washi-tape-yellow {
+  position: absolute;
+  top: -10px;
+  right: 25px;
+  transform: rotate(2.5deg);
+  width: 75px;
+  height: 20px;
+  background-color: rgba(237, 204, 77, 0.92);
+  border-left: 2px dashed rgba(98, 63, 27, 0.4);
+  border-right: 2px dashed rgba(98, 63, 27, 0.4);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  z-index: 20;
+}
+
+.washi-tape-red {
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  transform: rotate(-3deg);
+  width: 70px;
+  height: 18px;
+  background-color: rgba(187, 36, 10, 0.88);
+  border-left: 2px dashed rgba(255, 255, 255, 0.5);
+  border-right: 2px dashed rgba(255, 255, 255, 0.5);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  z-index: 20;
+}
+
+/* Retro Circular Stamp */
+.retro-stamp-round {
+  width: 74px;
+  height: 74px;
+  border: 2px dashed #BB240A;
+  border-radius: 9999px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 8px;
+  font-weight: 800;
+  color: #BB240A;
+  transform: rotate(-12deg);
+  background-color: rgba(255, 255, 255, 0.95);
+  line-height: 1.1;
+  text-align: center;
+  box-shadow: 2px 2px 0px rgba(187, 36, 10, 0.2);
+}
+
+/* Slanted Ink Stamp Badge */
+.retro-stamp-slanted {
+  border: 2px dashed #BB240A;
+  padding: 4px 10px;
+  color: #BB240A;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transform: rotate(-4deg);
+  display: inline-block;
+  background-color: rgba(247, 243, 238, 0.95);
+  box-shadow: 2px 2px 0px #623F1B;
+}
+
+/* Retro Checkerboard Ribbon */
+.checkerboard-strip {
+  background-image: repeating-linear-gradient(45deg,
+      #38200B 25%,
+      transparent 25%,
+      transparent 75%,
+      #38200B 75%,
+      #38200B),
+    repeating-linear-gradient(45deg,
+      #38200B 25%,
+      #EDCC4D 25%,
+      #EDCC4D 75%,
+      #38200B 75%,
+      #38200B);
+  background-position: 0 0, 6px 6px;
+  background-size: 12px 12px;
+  height: 10px;
+  width: 100%;
+}
+
+/* Airmail Stripe Pattern */
+.airmail-stripes {
+  background: repeating-linear-gradient(-45deg,
+      #BB240A,
+      #BB240A 12px,
+      #F6F0EA 12px,
+      #F6F0EA 20px,
+      #2B5CB8 20px,
+      #2B5CB8 32px,
+      #F6F0EA 32px,
+      #F6F0EA 40px);
+  height: 8px;
+  width: 100%;
+}
